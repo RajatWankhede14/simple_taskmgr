@@ -94,4 +94,4 @@ The system implements a **Token Bucket (Bucket Pattern)** algorithm for precise 
 1.  **Explicit Multi-Tenant Middleware**: Implementing a middleware that sets a `company_id` on the request globally would simplify filtering in complex queries (e.g., using `django-multitenant`).
 2.  **Explicit Company field on Task**: Adding a direct ForeignKey from `Task` to `Company` for even faster indexing and simpler cross-filtering if Managers need to see tasks they didn't create but belong to their company.
 3.  **Notification System**: Integrated signals to notify Reportees via email/mobile when a task is assigned.
-4.  **Redis Caching**: Moving the `TokenBucketThrottle` state to Redis for distributed rate-limiting across multiple app servers.
+
